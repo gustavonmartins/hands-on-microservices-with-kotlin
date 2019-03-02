@@ -15,7 +15,7 @@ class Chapter2Application
 @Controller
 class FirstController{
 	@Autowired
-	lateinit var service:ExampleService
+	lateinit var service:ServiceInterface
 
 	@RequestMapping(value="/user/{name}", method=arrayOf(RequestMethod.GET))
 	@ResponseBody
