@@ -1,3 +1,22 @@
+spring:
+    profiles:
+        active: "development"
+
 service:
     message:
-        text: "Howdihow"
+        type:   "simple"
+        text:   "hello"
+---
+spring:
+    profiles:   "development"
+service:
+    message:
+        text:   "hi"
+
+---
+spring:
+    profiles:   "production"
+service:
+    message:
+        type:   "advance"
+        text:   "welcome"
