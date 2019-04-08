@@ -23,7 +23,7 @@ class CustomerController{
     @GetMapping(value=["/customers"])
     fun getCustomers(@RequestParam(required=false, defaultValue="") nameFilter: String)=customerService.searchCustomers(nameFilter)
 
-    @PostMapping(value=["/customer/"])
+    @PostMapping(value=["/customer"])
     fun createCustomer(@RequestBody customer:Customer):ResponseEntity<Unit>{
         customerService.createCustomer(customer)
 
